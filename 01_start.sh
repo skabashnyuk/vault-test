@@ -1,3 +1,7 @@
+#!/bin/bash
+set -e
+echo "Preparing new minikube"
+
 minikube stop && minikube delete
 minikube start --cpus 4
 

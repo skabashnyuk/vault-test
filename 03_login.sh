@@ -1,3 +1,6 @@
+#!/bin/bash
+set -e
+echo "Logging in vault"
 while [ "$(kubectl get pods -l app.kubernetes.io/name=vault -n vault -o jsonpath='{.items[*].status.phase}')" != "Running" ]; do
    sleep 5
    echo "Waiting for vault to be ready."
